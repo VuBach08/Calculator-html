@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="styles.css">
+  <title>Calculator App</title>
+  <script src="app.js" defer></script>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+  <div class="container">
+    <header class="cal-header">
+      <h1 class="header">calc</h1>
+      <div class="switch-theme">
+        <p class="label">THEME</p>
+        <div class="theme-toggle">
+          <div class="labels">
+            <label for="t1">1</label>
+            <label for="t2">2</label>
+            <label for="t3">3</label>
+          </div>
+          <div class="toggle-bar">
+            <label for="t1" class="toggle-zone"></label>
+            <label for="t2" class="toggle-zone"></label>
+            <label for="t3" class="toggle-zone"></label>
+
+            <input type="radio" name="theme" id="t1" checked>
+            <input type="radio" name="theme" id="t2">
+            <input type="radio" name="theme" id="t3">
+
+            <div class="toggle-dot"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="screen">
+      <p>399,981</p>
+    </section>
+
+    <section class="keypad">
+      <button class="key">7</button>
+      <button class="key">8</button>
+      <button class="key">9</button>
+      <button class="key delete">DEL</button>
+      
+      <button class="key">4</button>
+      <button class="key">5</button>
+      <button class="key">6</button>
+      <button class="key">+</button>
+      
+      <button class="key">1</button>
+      <button class="key">2</button>
+      <button class="key">3</button>
+      <button class="key">-</button>
+      
+      <button class="key">.</button>
+      <button class="key">0</button>
+      <button class="key">/</button>
+      <button class="key">x</button>
+      
+      <button class="key reset">RESET</button>
+      <button class="key result">=</button>
+    </section>
+  </div>
+</body>
+</html>

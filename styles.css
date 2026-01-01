@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+:root {
+  --navy850-color: hsl(222, 26%, 31%);
+  --navy900-color: hsl(223, 31%, 20%);
+  --navy950-color: hsl(224, 36%, 15%);
+  --navy700-color: hsl(225, 21%, 49%);
+  --navy800-color: hsl(224, 28%, 35%);
+  --red600-color: hsl(6, 63%, 50%);
+  --red800-color: hsl(6, 70%, 34%);
+  --gray200-color: hsl(0, 0%, 90%);
+  --gray-orange400-color: hsl(28, 16%, 65%);
+  --white-color: hsl(0, 100%, 100%);
+  --navy750-color: hsl(221, 14%, 31%);
+
+  --body-font: 'League Spartan', sans-serif;
+  --font-size: 32px;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--navy850-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 1.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 375px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: var(--white-color);
+  margin-bottom: 0.5rem;
+}
+
+.logo { 
+  font-size: 2rem; 
+  margin: 0; 
+  letter-spacing: -0.5px;
+}
+
+/*Mobile*/
+.switch-theme {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5rem;
+}
+
+.label {
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  margin: 0 0 0.4rem 0;
+  margin-bottom: 5px;
+}
+
+.theme-toggle {
+  width: 70px;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0.2rem;
+}
+
+.labels p { 
+  font-size: 0.7rem; 
+  margin: 0; 
+}
+
+.toggle-bar {
+  width: 70px;
+  height: 26px;
+  background: var(--navy950-color);
+  border-radius: 20px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.toggle-zone {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.toggle-bar input {
+  display: none;
+}
+
+.toggle-dot {
+  width: 16px;
+  height: 16px;
+  background: var(--red600-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  transition: left 0.25s ease;
+  z-index: 1;
+}
+
+
+#t1:checked ~ .toggle-dot {
+  left: 5px;
+}
+
+#t2:checked ~ .toggle-dot {
+  left: 26px;
+}
+
+#t3:checked ~ .toggle-dot {
+  left: 48px;
+}
+
+.screen {
+  background-color: var(--navy950-color);
+  color: var(--white-color);
+  padding: 1.5rem;
+  border-radius: 0.6rem;
+  text-align: right;
+}
+
+.screen p { 
+  font-size: var(--font-size); 
+  margin: 0; 
+}
+
+.keypad {
+  background-color: var(--navy900-color);
+  padding: 1.5rem;
+  border-radius: 0.6rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.key {
+  font-family: var(--body-font);
+  font-size: 28px;
+  font-weight: 700;
+  padding: 1rem 0;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  background-color: var(--gray200-color);
+  box-shadow: 0 4px var(--gray-orange400-color);
+  color: var(--navy750-color);
+}
+
+.key.del, .key.reset {
+  background-color: var(--navy700-color);
+  box-shadow: 0 4px var(--navy800-color);
+  color: var(--white-color);
+  font-size: 1.2rem;
+}
+
+.key.reset { 
+  grid-column: span 2; 
+}
+
+.key.result {
+  grid-column: span 2;
+  background-color: var(--red600-color);
+  box-shadow: 0 4px var(--red800-color);
+  color: var(--white-color);
+}
+
+.attribution { 
+  margin-top: 2rem;
+  font-size: 11px; 
+  text-align: center; 
+  color: var(--white-color);
+}
+
+.attribution a { 
+  color: var(--red600-color); 
+}
+
+
+/*Theme 2*/
+body.theme-2 {
+  background-color: hsl(0, 0%, 90%);
+}
+
+body.theme-2 header {
+  color: hsl(60, 10%, 19%);
+}
+
+body.theme-2 .toggle-bar {
+  background-color: hsl(0, 5%, 81%);
+}
+
+body.theme-2 .toggle-dot {
+  background-color: hsl(25, 98%, 40%);
+}
+
+body.theme-2 .screen {
+  background-color: hsl(0, 0%, 93%);
+  color: hsl(60, 10%, 19%);
+}
+
+body.theme-2 .keypad {
+  background-color: hsl(0, 5%, 81%);
+}
+
+body.theme-2 .key {
+  background-color: hsl(45, 7%, 89%);
+  box-shadow: 0 4px hsl(35, 11%, 61%);
+  color: hsl(60, 10%, 19%);
+}
+
+body.theme-2 .key.delete,
+body.theme-2 .key.reset {
+  background-color: hsl(185, 42%, 37%);
+  box-shadow: 0 4px hsl(185, 58%, 25%);
+  color: #fff;
+}
+
+body.theme-2 .key.result {
+  background-color: hsl(25, 98%, 40%);
+  box-shadow: 0 4px hsl(25, 99%, 27%);
+  color: #fff;
+}
+
+
+/*Theme 3*/
+body.theme-3 {
+  background-color: hsl(268, 75%, 9%);
+}
+
+body.theme-3 header {
+  color: hsl(52, 100%, 62%);
+}
+
+body.theme-3 .toggle-bar {
+  background-color: hsl(268, 71%, 12%);
+}
+
+body.theme-3 .toggle-dot {
+  background-color: hsl(176, 100%, 44%);
+}
+
+body.theme-3 .screen {
+  background-color: hsl(268, 71%, 12%);
+  color: hsl(52, 100%, 62%);
+}
+
+body.theme-3 .keypad {
+  background-color: hsl(268, 71%, 12%);
+}
+
+body.theme-3 .key {
+  background-color: hsl(268, 47%, 21%);
+  box-shadow: 0 4px hsl(290, 70%, 36%);
+  color: hsl(52, 100%, 62%);
+}
+
+body.theme-3 .key.delete,
+body.theme-3 .key.reset {
+  background-color: hsl(281, 89%, 26%);
+  box-shadow: 0 4px hsl(285, 91%, 52%);
+  color: #fff;
+}
+
+body.theme-3 .key.result {
+  background-color: hsl(176, 100%, 44%);
+  box-shadow: 0 4px hsl(177, 92%, 70%);
+  color: hsl(198, 20%, 13%);
+}
+
+/*Desktop*/
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+  
+  .keypad { 
+    gap: 1.5rem; 
+    padding: 2rem; 
+  }
+
+  .screen {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .screen p {
+    font-size: 3rem;
+  }
+}
